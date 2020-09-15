@@ -9,17 +9,29 @@
         <meta property="og:description" content="Dive management software">
         <meta property="og:site_name" content="Makara">
         <style>
-            body{
+            body {
                 background-color: rgb(255, 255, 255);
                 margin: 0px;
                 padding: 0px;
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            body > section {
+                width: 100vw;
+                max-width: 720px;
+            }
+            body > section:nth-child(2n) { background-color: #f3f3f3; }
+            @media (prefers-color-schema: dark) {
+                body > section:nth-child(2n) { background-color: #3a3a3a; }
             }
             * { color: #282828; font-family: sans-serif;}
             @media (prefers-color-scheme: dark) {
                 h1   { color: #ffffff; }
                 p    { color: rgb(255, 255, 255); }
                 body { background-color: #282828; }
-                a    { color: rgb(197, 226, 236);}
+                a    { color: rgb(197, 226, 236); }
             }
             h1 {
                 margin-top: 38px;
@@ -52,7 +64,7 @@
             <h1>Makara</h1>
             <p>Comprehensive dive management software for shops,
                 operators, and divers
-            </p>>
+            </p>
         </section>
         <section>
             <!--Example of a second content section. Where you envisage content
@@ -60,6 +72,7 @@
                 tag-->
             <h2>Second level header</h2>
             <p>Description of some sort</p>
+            <p>Another paragraph of description</p>
             <h3>Third level header</h3>
             <ol>
                 <li>Numbered feature point</li>
@@ -68,6 +81,9 @@
         </section>
         <section>
             <!--Example of a third content section-->
+            <p>This new section doesn't have a header, but it does have
+                these great bullet points:
+            </p>
             <ul>
                 <li>Great feature bullet point</li>
                 <li>Amazing feature bullet point</li>
