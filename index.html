@@ -20,7 +20,6 @@
             }
             body > section {
                 width: 100vw;
-                max-width: 720px;
             }
             body > section:nth-child(2n) { background-color: #f3f3f3; }
             @media (prefers-color-schema: dark) {
@@ -55,16 +54,151 @@
             @media screen and (max-width: 1800px) {
                 h1 { font-size: 28px; }
             }
+
+            .button {
+                font-weight: bold;
+                border-radius: 0px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                padding-left: 12px;
+                padding-right: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+                color: white;
+                cursor: pointer;
+            }
+            .button.prominent {
+                background-color: orangered;
+                border: 1px solid orangered
+            }
+            .button.austere {
+                background-color: transparent;
+                border: 1px solid white;
+            }
+
+
+            section:nth-of-type(1) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                background-color: darkslateblue;
+            }
+            section:nth-of-type(1) > div:first-of-type {
+                width: 100%;
+                max-width: 500px;
+                margin-right: 48px;
+            }
+            section:nth-of-type(1) > div:nth-of-type(2) {
+                width: 100%;
+                max-width: 500px;
+                margin-bottom: 48px;
+            }
+            section:nth-of-type(1) > div:first-of-type > p:first-of-type {
+                font-size: 32px;
+                color: white;
+                text-align: left;
+            }
+            section:nth-of-type(1) > div:first-of-type > p:nth-of-type(2) {
+                color: white;
+                font-size: 20px;
+                text-align: left;
+            }
+            section:nth-of-type(1) > div:first-of-type > div {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            section:nth-of-type(1) > div:first-of-type a.button {
+                width: 160px;
+            }
+            section:nth-of-type(1) > div:first-of-type a.button:first-of-type {
+                margin-right: 12px;
+            }
+            section:nth-of-type(1) > div:nth-of-type(2) > div:first-of-type {
+                background-color: white;
+                width: 100%;
+                height: 190px;
+                margin-top: 48px;
+            }
+            section:nth-of-type(1) div.splash-quote {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            section:nth-of-type(1) div.splash-quote > p {
+                color: white;
+                font-size: 17px;
+                background-color: rgba(0, 0, 0, 0.7);
+                border-radius: 6px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 18px;
+                padding-right: 18px;
+                position: relative;
+            }
+            section:nth-of-type(1) div.splash-quote > p::after {
+                content: '';
+                position: absolute;
+                background-color: transparent;
+                left: 30px;
+                bottom: -20px;
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-top: 20px solid  rgba(0, 0, 0, 0.7);
+            }
+            section:nth-of-type(1) div.splash-quote > div { 
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: 12px;
+            }
+            section:nth-of-type(1) div.splash-quote > div > div > p { 
+                color: white;
+                margin: 0px;
+            }
+            section:nth-of-type(1) div.splash-quote > div > div
+                > p:first-of-type { 
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+
         </style>
     </head>
     <body>
         <section>
-            <!--Example of a content section, likely the "splash" section
-            first seen by visitors.-->
-            <h1>Makara</h1>
-            <p>Comprehensive dive management software for shops,
-                operators, and divers
-            </p>
+            <div>
+                <p>From enquiry to five star review, all in one place.</p>
+                <p>Eliminate administration and costs by managing your
+                    customers, dives, inventory and documentation in one place.
+                    That's more time in the water for you and less time
+                    organising for everyone.
+                </p>
+                <div>
+                    <a class='button prominent'>Get started free</a>
+                    <a class='button austere'>See how it works</a>
+                </div>
+            </div>
+            <div>
+                <div><!--image placeholder --></div>
+                <div class='splash-quote'>
+                    <p>Makara is a revelation! It's easy to use and keeps me
+                        and my team organised. I get back at least 3 hours
+                        per week thanks to Makara.
+                    </p>
+                    <div>
+                        <img src="">
+                        <div>
+                            <p>Lisa Ralph</p>
+                            <p>Pro Dive Lord Howe Island</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section>
             <!--Example of a second content section. Where you envisage content
